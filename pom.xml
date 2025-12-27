@@ -174,4 +174,12 @@
         <url>https://github.com/Kavit-Rajesh-Shah/northstar-platform-core-framework</url>
         <tag>HEAD</tag>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/Kavit-Rajesh-Shah/northstar-platform-core-framework</url>
+        </repository>
+    </distributionManagement>
 </project>

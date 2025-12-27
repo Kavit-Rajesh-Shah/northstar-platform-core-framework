@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Parent reactor -->
+    <parent>
+        <groupId>com.arch.northstar.platform</groupId>
+        <artifactId>northstar-core-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- BOM coordinates -->
+    <artifactId>northstar-core-bom</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Northstar Platform - Core BOM</name>
+    <description>
+        Bill of Materials (BOM) for the Northstar Core platform.
+        Provides consistent version alignment for all security, logging-related modules
+        without enforcing runtime dependencies.
+    </description>
+
+    <!-- BOM SHOULD NOT have regular dependencies -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- ============================= -->
+            <!-- Northstar Platform Modules -->
+            <!-- ============================= -->
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-context</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-audit</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-performance</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-observability</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-enforcement</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- ============================= -->
+            <!-- External API Alignment -->
+            <!-- (APIs only, no backends) -->
+            <!-- ============================= -->
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>2.0.12</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.9.21</version>
+            </dependency>
+
+            <!-- Spring Framework alignment -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>6.1.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>6.1.3</version>
+            </dependency>
+
+            <!-- Spring Boot autoconfiguration -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>3.2.2</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

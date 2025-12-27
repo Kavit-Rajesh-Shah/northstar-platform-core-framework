@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group & Artifact -->
+    <groupId>com.arch.northstar.platform</groupId>
+    <artifactId>northstar-core-platform</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Northstar Platform - Starter Platform</name>
+    <description>
+        Core security, logging, audit, and performance framework for Northstar microservices.
+    </description>
+    <!-- Recommended: centralize versions via parent BOM later -->
+    <properties>
+        <java.version>17</java.version>
+        <spring.boot.version>3.2.2</spring.boot.version>
+    </properties>
+
+    <modules>
+        <module>commons-logging-core</module>
+        <module>commons-logging-context</module>
+        <module>commons-logging-audit</module>
+        <module>commons-logging-performance</module>
+        <module>commons-logging-observability</module>
+        <module>commons-logging-enforcement</module>
+        <module>northstar-core-bom</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- INTERNAL platform modules -->
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-context</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-audit</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-performance</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-observability</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-logging-enforcement</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+
+            <!-- Compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Spring Boot Plugin (for metadata processing) -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <pushChanges>true</pushChanges>
+                    <localCheckout>true</localCheckout>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:https://github.com/Kavit-Rajesh-Shah/northstar-platform-logging-framework.git</connection>
+        <developerConnection>scm:git:https://github.com/Kavit-Rajesh-Shah/northstar-platform-logging-framework.git</developerConnection>
+        <url>https://github.com/Kavit-Rajesh-Shah/northstar-platform-logging-framework</url>
+        <tag>HEAD</tag>
+    </scm>
+</project>

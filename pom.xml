@@ -121,9 +121,9 @@
     </build>
 
     <scm>
-        <connection>scm:git:https://github.com/Kavit-Rajesh-Shah/northstar-platform-logging-framework.git</connection>
-        <developerConnection>scm:git:https://github.com/Kavit-Rajesh-Shah/northstar-platform-logging-framework.git</developerConnection>
-        <url>https://github.com/Kavit-Rajesh-Shah/northstar-platform-logging-framework</url>
+        <connection>scm:git:https://github.com/Kavit-Rajesh-Shah/northstar-platform-core-framework.git</connection>
+        <developerConnection>scm:git:https://github.com/Kavit-Rajesh-Shah/northstar-platform-core-framework.git</developerConnection>
+        <url>https://github.com/Kavit-Rajesh-Shah/northstar-platform-core-framework</url>
         <tag>HEAD</tag>
     </scm>
 </project>

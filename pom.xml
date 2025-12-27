@@ -20,12 +20,23 @@
     </properties>
 
     <modules>
+        <!-- Existing logging modules -->
         <module>commons-logging-core</module>
         <module>commons-logging-context</module>
         <module>commons-logging-audit</module>
         <module>commons-logging-performance</module>
         <module>commons-logging-observability</module>
         <module>commons-logging-enforcement</module>
+
+        <!-- NEW Security Modules -->
+        <module>commons-security-core</module>
+        <module>commons-security-context</module>
+        <module>commons-security-auth-spi</module>
+        <module>commons-security-auth-jwt-starter</module>
+        <module>commons-security-http-adapter</module>
+<!--&lt;!&ndash;        <module>commons-security-auth-apikey-starter</module>&ndash;&gt;-->
+        <module>commons-security-autoconfigure</module>
+<!--        <module>commons-security-authorization-acl</module>-->
         <module>northstar-core-bom</module>
     </modules>
 
@@ -67,6 +78,43 @@
                 <artifactId>commons-logging-enforcement</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-context</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-auth-spi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-auth-jwt-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-http-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

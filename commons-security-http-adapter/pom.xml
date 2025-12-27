@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.arch.northstar.platform</groupId>
+        <artifactId>northstar-core-platform</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>commons-security-http-adapter</artifactId>
+
+    <name>Northstar Platform - Commons Security HTTP Adapter</name>
+    <description>
+        HTTP adapter that converts HttpServletRequest into
+        AuthenticationRequestContext for Northstar security
+    </description>
+
+    <dependencies>
+
+        <!-- Auth SPI -->
+        <dependency>
+            <groupId>com.arch.northstar.platform</groupId>
+            <artifactId>commons-security-auth-spi</artifactId>
+        </dependency>
+
+        <!-- Servlet API (provided by container) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

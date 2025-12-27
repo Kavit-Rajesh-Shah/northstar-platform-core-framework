@@ -66,6 +66,51 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <!-- ================================================= -->
+            <!-- Northstar Security Core (FOUNDATION) -->
+            <!-- ================================================= -->
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-context</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-auth-spi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-auth-jwt-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-http-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.arch.northstar.platform</groupId>
+                <artifactId>commons-security-http-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- ============================= -->
             <!-- External API Alignment -->
             <!-- (APIs only, no backends) -->

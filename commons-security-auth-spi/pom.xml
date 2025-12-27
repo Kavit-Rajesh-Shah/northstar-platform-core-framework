@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.arch.northstar.platform</groupId>
+        <artifactId>northstar-core-platform</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>commons-security-auth-spi</artifactId>
+
+    <name>Northstar Platform - Commons Security Authentication SPI</name>
+    <description>
+        Authentication Service Provider Interface (SPI) for the Northstar platform.
+        Defines contracts for pluggable authentication mechanisms such as JWT,
+        API Key, OAuth2, and mTLS.
+    </description>
+
+    <dependencies>
+
+        <!-- Core security domain -->
+        <dependency>
+            <groupId>com.arch.northstar.platform</groupId>
+            <artifactId>commons-security-core</artifactId>
+        </dependency>
+
+        <!-- Security context -->
+        <dependency>
+            <groupId>com.arch.northstar.platform</groupId>
+            <artifactId>commons-security-context</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

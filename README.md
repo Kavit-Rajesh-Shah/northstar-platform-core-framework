@@ -324,4 +324,4 @@ The framework is designed to be extended for:
 
 ## 16. Summary
 
-The **Northstar Platform – Commons Logging Framework** provides a **scalable, modular, and enterprise-ready** foundation for logging, auditing, performance measurement, and observability — without sacrificing flexibility or developer productivity.
+The **Northstar Platform – Core Framework** provides a **scalable, modular, and enterprise-ready** foundation for logging, auditing, performance measurement, and observability — without sacrificing flexibility or developer productivity.
